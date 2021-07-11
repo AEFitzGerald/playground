@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+    #box_container, 
+    header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    header {
+        min-height: 80px;
+    }
+
+    h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .box {
+        width: 5vw;
+        height: 10vh;
+        margin: 10px;   
+    }  
+    
+    .{{classname}} {
+        background-color: {{color}};
+    }
+
+</style>
+<title>Boxes Galore</title>
+</head>
+
+<body>
+    <header>
+    <h1>Hello World</h1>
+    </header>   
+
+    <section id = "box_container">
+            {% for j in range(0,boxes): %}
+            <div class="box {{classname}}"></div>
+            {% endfor %} 
+    </section>
+
+</body>
+</html>
+
